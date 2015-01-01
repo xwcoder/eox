@@ -1,0 +1,10 @@
+{
+  "name": "eox",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "~1.0.0"
+  },
+  "author": "creep",
+  "license": "MIT"
+}

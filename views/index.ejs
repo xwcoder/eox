@@ -1,0 +1,11 @@
+<% include head %>
+<ul>
+<% for ( var i = 0, len = posts.length, post; i < len; i++ ) { %>
+<% post = posts[i]; %>
+<li>
+<h3><a href="/blog/view/<%= post.id %>"><%= post.name %></a></h3>
+<div><%= post.summary %></div>
+</li>
+<% } %>
+</ul>
+<% include foot %>
