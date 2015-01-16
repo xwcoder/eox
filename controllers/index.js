@@ -4,12 +4,17 @@ var ejs = require( '../lib/ejs' );
 
 function index ( r ) {
     var res = r.response;
-    var posts = Post.getByPage();
-    
-    res.write( ejs.render( 'index.ejs', {
-        title: '首页',
-        posts: posts
-    } ) );
+    try {
+        var posts = Post.getByPage();
+        
+        res.write( ejs.render( 'index.ejs', {
+            title: '首页',
+            posts: posts
+        } ) );
+
+    } catch ( e ) {
+        res.write( '404' );
+    }
 }
 
 module.exports = index;
